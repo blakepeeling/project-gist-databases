@@ -4,12 +4,12 @@ from gists_database.search import search_gists
 from .fixtures import populated_gists_database as db
 
 
-def test_search_without_parameters_returns_all_gists(db):
+def test_search_without_parameters_returns_all_gists(db): #pass
     gists = search_gists(db)
     assert len(gists) == 7
 
 
-def test_search_with_github_id(db):
+def test_search_with_github_id(db): #pass
     gists = search_gists(db, github_id='4232a4cdad00bd92a7a64cf3e2795820')
     assert len(gists) == 1
 
@@ -17,7 +17,7 @@ def test_search_with_github_id(db):
     assert gist.github_id == '4232a4cdad00bd92a7a64cf3e2795820'
 
 
-def test_search_with_created_date_equals(db):
+def test_search_with_created_date_equals(db): #pass
     # 2014-05-03T20:26:08Z
     d = datetime(2014, 5, 3, 20, 26, 8)
 
